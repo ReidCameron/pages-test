@@ -1,0 +1,148 @@
+.ss__branch-override{
+    width: 360px;
+    height: 120px;
+    overflow: hidden;
+    font-size: 14px;
+    position: fixed;
+    z-index: 999999;
+    cursor: auto;
+    bottom: 50px;
+    right: 0px;
+    background: #fffffff2;
+    color: #515151;
+    border-width: 1px 0px 1px 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-top-color: #cccccc;
+    border-bottom-color: #cccccc;
+    border-left-color: #cccccc;
+    border-image: initial;
+    border-right-style: initial;
+    border-right-color: initial;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    box-shadow: #51515180 1px 1px 3px 0px;
+    transition: height 0.2s ease 0s, right 0.5s ease 0.2s;
+}
+.ss__branch-override.ss__branch-override--dark{
+    background: #3b23ade6;
+    color: #fff;
+    border: 0px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    box-shadow: #4c3ce2 1px 1px 3px 0px;
+}
+.ss__branch-override.ss__branch-override--error{
+    background: #820606e6;
+    color: #fff;
+}
+.ss__branch-override.ss__branch-override--collapsed {
+    transition: height 0.5s ease 0.5s, right 0.5s ease 0s;
+    right: -316px;
+    height: 50px;
+    cursor: pointer;
+}
+.ss__branch-override .ss__branch-override__top {
+    padding: 10px;
+    border-bottom: 1px solid #cccccc;
+}
+.ss__branch-override.ss__branch-override--dark .ss__branch-override__top {
+    background: #3b23ad4d;
+    border-bottom: 1px solid #4c3de1;
+}
+.ss__branch-override.ss__branch-override--error .ss__branch-override__top{
+    background: rgba(130, 6, 6, 0.3);
+    border-bottom: 1px solid #760000;
+}
+.ss__branch-override .ss__branch-override__top .ss__branch-override__top__logo {
+    display: inline-block;
+    height: 30px;
+    max-height: 30px;
+    vertical-align: middle;
+}
+.ss__branch-override .ss__branch-override__top .ss__branch-override__top__collapse {
+    /* display: inline-block; */
+    float: right;
+    padding: 5px;
+    cursor: pointer;
+}
+.ss__branch-override .ss__branch-override__bottom__left__icon {
+    fill: #515151;
+    stroke: #515151;
+    width: 12px;
+    height: 12px;
+    position: relative;
+}
+.ss__branch-override.ss__branch-override--dark .ss__branch-override__bottom__left__icon,
+.ss__branch-override.ss__branch-override--error .ss__branch-override__bottom__left__icon {
+    stroke:#fff;
+    stroke-width: 8;
+}
+.ss__branch-override .ss__branch-override__top .ss__branch-override__top__button {
+    border-radius: 5px;
+    padding: 6px;
+    height: 100%;
+    line-height: 14px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 10px;
+    border: 1px solid #515151;
+    color: #515151;
+    float: right;
+    margin-right: 14px;
+}
+.ss__branch-override.ss__branch-override--dark .ss__branch-override__top .ss__branch-override__top__button,
+.ss__branch-override.ss__branch-override--error .ss__branch-override__top .ss__branch-override__top__button {
+    border: 1px solid #fff;
+    color: #fff;
+}
+.ss__branch-override .ss__branch-override__bottom {
+    padding: 10px 15px;
+    font-size: 12px;
+}
+.ss__branch-override .ss__branch-override__bottom .ss__branch-override__bottom__left {
+    font-weight: bold;
+    font-style: italic;
+    color: #3a23ad;
+    font-size: 14px;
+    line-height: 20px;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    max-width: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 1px;
+}
+.ss__branch-override.ss__branch-override--dark .ss__branch-override__bottom .ss__branch-override__bottom__left {
+    color: #03cee1;
+}
+.ss__branch-override.ss__branch-override--error .ss__branch-override__bottom .ss__branch-override__bottom__left {
+    color: #be9628;
+}
+.ss__branch-override .ss__branch-override__bottom .ss__branch-override__bottom__right {
+    float: right;
+    font-style: italic;
+    color: #3a23ad;
+    font-size: 12px;
+    line-height: 20px;
+}
+.ss__branch-override.ss__branch-override--dark .ss__branch-override__bottom .ss__branch-override__bottom__right {
+    color: #03cee1;
+}
+.ss__branch-override.ss__branch-override--error .ss__branch-override__bottom .ss__branch-override__bottom__right {
+    color: #be9628;
+}
+.ss__branch-override .ss__branch-override__bottom .ss__branch-override__bottom__content {
+    margin-top: 10px;
+}
+.ss__branch-override .ss__icon.ss__icon--warn{
+    fill: #be9628;
+    stroke: #be9628;
+    width: 12px;
+    height: 12px;
+    position: relative;
+    margin-right: 10px;
+}
