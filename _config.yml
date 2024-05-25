@@ -1,6 +1,12 @@
+theme: null
 exclude:
   - src/
   - package.json
   - package-lock.json
   - webpack.js
   - README.md
+  - assets/
+  - style.css
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
