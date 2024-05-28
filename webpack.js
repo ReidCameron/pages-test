@@ -2,6 +2,7 @@ module.exports = {
 	mode: 'production',
 	entry: {
 		preview: './src/preview.js',
+		"preview-modal": './src/preview-modal.js',
 	},
 	output: {
 		path: __dirname,
