@@ -15,7 +15,7 @@ var base = 'https://reidcameron.github.io/pages-test/'; //TODO: Debug - https://
                 var node = mutationAddedNodes[j];
                 if(node.src?.includes('searchspring.catalog.js')){
                     //Add draft as external angular.js resource
-                    node.setAttribute('external', base + 'sites/' + node.src.slice(-6) + '/' + (preview || cookie) + '.js');
+                    node.setAttribute('external', base + 'sites/' + (node.getAttribute('searchspring') || node.src.slice(-6)) + '/' + (preview || cookie) + '.js');
                     observer.disconnect();
                 }
             }
