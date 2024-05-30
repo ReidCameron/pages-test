@@ -1,5 +1,6 @@
 window.SearchSpringInit = function(){
-console.log("[SS]", "Preview Working")var self = this;
+console.log("[SS]", "Preview Working")
+var self = this;
 
 // springboard generated variables
 var modules = {};
