@@ -2,7 +2,7 @@
   "name": "pages-test",
   "version": "1.0.0",
   "description": "",
-  "main": "index.markdown",
+  "main": "index.html",
   "scripts": {
     "dev": "bundle exec jekyll serve --livereload",
     "build": "npx webpack build --config ./webpack.js"
