@@ -1,0 +1,35 @@
+name: Actions Practice
+
+on:
+  # schedule:
+    # - cron: '0 22 * * *' #5PM CST Daily
+  push:
+    paths:
+      - _trigger/
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+      - name: Run Cleanup Script
+        run: python ./.github/workflows/cleanup.py
+      - name: Check For Removed Files
+        run: if [[ $(git diff --exit-code | grep -c ".") > 0 ]]; then echo "IS_VALID=true" >> $GITHUB_ENV; else echo "IS_VALID=false" >> $GITHUB_ENV;fi
+      - if: ${{ env.IS_VALID == 'true' }}
+        name: Commit and Push Changes
+        run: |
+          git config --global user.email "${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com"
+          git config --global user.name "${{ github.actor }}"
+          git remote set-url origin https://${{ secrets.ssh }}@github.com/ReidCameron/pages-test.git
+          git add .
+          git commit -m "Auto Cleanup"
+          git fetch origin main
+          git push origin HEAD:main
+  build:
+    uses: ./.github/workflows/jekyll.yml
