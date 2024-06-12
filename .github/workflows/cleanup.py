@@ -6,14 +6,14 @@ def main():
 
     ## Delete Stale Previews ##
     #Loop through sites
-    for site in os.listdir('./files'):
-        path = f'./files/{site}'
+    for site in os.listdir('./sites'):
+        path = f'./sites/{site}'
         #Loop through files in site folder
         for file in os.listdir(path):
             #Find JSON files
             if file.endswith('.json'):
                 #If found, check expire date
-                filename = f'./files/{site}/{file}'
+                filename = f'./sites/{site}/{file}'
                 with open(filename) as json_file:
                     data = json.load(json_file)
                     if data['expire_date']:
