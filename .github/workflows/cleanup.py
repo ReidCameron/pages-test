@@ -16,8 +16,9 @@ def main():
                 filename = f'./sites/{site}/{file}'
                 with open(filename) as json_file:
                     data = json.load(json_file)
-                    if data['expire_date']:
-                        exp_date = datetime.datetime.strptime(data['expire_date'], "%d %b %Y %H:%M:%S GMT")#%Y-%m-%d %H:%M:%S.%f
+                    expire = data.get('expire')
+                    if expire:
+                        exp_date = datetime.datetime.strptime(expire, "%d %b %Y %H:%M:%S GMT")#%Y-%m-%d %H:%M:%S.%f
                         if exp_date and exp_date < datetime.datetime.now():
                             #Delete if expired
                             os.system(f"rm -rf {filename}")
